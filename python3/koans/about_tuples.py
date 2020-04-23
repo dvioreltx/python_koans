@@ -6,7 +6,7 @@ from runner.koan import *
 class AboutTuples(Koan):
     def test_creating_a_tuple(self):
         count_of_three =  (1, 2, 5)
-        self.assertEqual(__, count_of_three[2])
+        self.assertEqual(5, count_of_three[2])
 
     def test_tuples_are_immutable_so_item_assignment_is_not_possible(self):
 
@@ -34,7 +34,7 @@ class AboutTuples(Koan):
         list_count.append("boom")
         count_of_three = tuple(list_count)
 
-        self.assertEqual(__, count_of_three)
+        self.assertEqual((1, 2, 5, 'boom'), count_of_three)
 
     def test_tuples_of_one_look_peculiar(self):
         self.assertEqual(__, (1).__class__)
@@ -43,7 +43,7 @@ class AboutTuples(Koan):
         self.assertEqual(__, ("Not a tuple").__class__)
 
     def test_tuple_constructor_can_be_surprising(self):
-        self.assertEqual(__, tuple("Surprise!"))
+        self.assertEqual('Surprise!', tuple("Surprise!"))
 
     def test_creating_empty_tuples(self):
         self.assertEqual(__ , ())
